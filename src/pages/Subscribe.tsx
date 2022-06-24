@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
+import CodeMockapImage from '../assets/code_mockap.png';
+
 export function Subscribe() {
     const navigate = useNavigate()
 
@@ -28,7 +30,7 @@ export function Subscribe() {
     }
 
     return (
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
+        <div className="min-h-screen max-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center overflow-y-hidden">
 
             <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
                 <div className="max-w-[640px]">
@@ -70,7 +72,7 @@ export function Subscribe() {
                 </div>
             </div>
 
-            <img src="/src/assets/code_mockap.png" className="mt-18" alt="" />
+            <img src={CodeMockapImage} className="mt-18" alt="" />
         </div>
     )
 }
